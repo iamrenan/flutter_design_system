@@ -4,6 +4,7 @@ version: 0.0.1
 homepage: https://aireworks.dev
 repository: https://github.com/iamrenan/flutter-design-system
 issue_tracker: https://github.com/iamrenan/flutter-design-system/issues
+publish_to: none
 
 topics:
   - user-interface
