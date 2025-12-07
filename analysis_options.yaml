@@ -1,0 +1,7 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - camel_case_extensions
+    - prefer_relative_imports
+    - prefer_single_quotes
