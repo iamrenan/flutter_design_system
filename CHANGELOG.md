@@ -1,3 +1,9 @@
+## 0.0.2+2
+
+* Refactored avatar and avatar previews.
+* Set Avatar theme data properties as nullable to allow partial overrides.
+* Updated README with theming examples.
+
 ## 0.0.2+1
 
 * Added avatar previews.

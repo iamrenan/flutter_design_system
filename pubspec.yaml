@@ -1,6 +1,6 @@
 name: renan_design_system
 description: "A Flutter design system package providing ready-to-use UI components."
-version: 0.0.2+1
+version: 0.0.2+2
 homepage: https://aireworks.dev
 repository: https://github.com/iamrenan/flutter-design-system
 issue_tracker: https://github.com/iamrenan/flutter-design-system/issues

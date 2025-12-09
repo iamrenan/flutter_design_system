@@ -47,3 +47,41 @@ class MyApp extends StatelessWidget {
     }
 }
 ```
+
+# Theme
+
+Made with Flutter's theme in mind, you can further expand and customize the components to fit your application's design requirements.
+To customize, you can use `ThemeData.extensions`, either globally, within the `theme` of your `MaterialApp`:
+
+```dart
+MaterialApp(
+  theme: ThemeData(
+    extensions: [
+        AvatarThemeData(/* your customizations here */),
+        /** Other component themes can go here **/
+    ],
+  ),
+  home: MyHomePage(),
+);
+```
+
+Or locally, within a specific widget subtree using material's `Theme`:
+
+```dart
+CupertinoApp(
+    home: Theme(
+        data: Theme(
+            extensions: [
+                AvatarThemeData(/* your customizations here */),
+                /** Other component themes can go here **/
+            ],
+        ),
+        child: MyHomePage(),
+    ),
+);
+```
+
+These are quick examples, and you can explore other ways to customize themes in Flutter as needed.
+
+# Main Features
+- **Widget Previews**: Makes use of Flutter's latest Widget Previews feature to allow developers to see component variations. Requires Flutter 3.38.0+ for IDE support, or 3.35.0+ for command line support (with `flutter widget-preview start`).

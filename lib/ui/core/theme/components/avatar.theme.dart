@@ -50,10 +50,10 @@ final class AvatarInitialsThemeData {
 }
 
 final class AvatarThemeData extends ThemeExtension<AvatarThemeData> {
-  final AvatarDefaultThemeData standard;
-  final AvatarInitialsThemeData initials;
+  final AvatarDefaultThemeData? standard;
+  final AvatarInitialsThemeData? initials;
 
-  const AvatarThemeData({required this.standard, required this.initials});
+  const AvatarThemeData({this.standard, this.initials});
 
   factory AvatarThemeData.fromTokens(AvatarTokens avatar) {
     return AvatarThemeData(
@@ -91,25 +91,25 @@ final class AvatarThemeData extends ThemeExtension<AvatarThemeData> {
     return AvatarThemeData(
       standard: AvatarDefaultThemeData(
         background: Color.lerp(
-          standard.background,
-          other.standard.background,
+          standard?.background,
+          other.standard?.background,
           t,
         ),
         foreground: Color.lerp(
-          standard.foreground,
-          other.standard.foreground,
+          standard?.foreground,
+          other.standard?.foreground,
           t,
         ),
       ),
       initials: AvatarInitialsThemeData(
         background: Color.lerp(
-          initials.background,
-          other.initials.background,
+          initials?.background,
+          other.initials?.background,
           t,
         ),
         foreground: Color.lerp(
-          initials.foreground,
-          other.initials.foreground,
+          initials?.foreground,
+          other.initials?.foreground,
           t,
         ),
       ),
