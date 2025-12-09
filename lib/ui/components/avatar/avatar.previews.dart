@@ -7,10 +7,6 @@ const String _previewAvatarImageUrl =
     'https://avatars.githubusercontent.com/u/8487664?v=4&size=64';
 
 final class AvatarPreview extends Preview {
-  final AvatarSizes? avatarSize;
-  final String? avatarName;
-  final ImageProvider<Object>? avatarImage;
-
   const AvatarPreview({
     super.name,
     super.group,
@@ -19,9 +15,6 @@ final class AvatarPreview extends Preview {
     super.brightness,
     super.localizations,
     super.size,
-    this.avatarSize,
-    this.avatarName,
-    this.avatarImage,
   }) : super(theme: AvatarPreview.themeBuilder);
 
   static PreviewThemeData themeBuilder() {

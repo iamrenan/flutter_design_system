@@ -1,3 +1,8 @@
+## 0.0.3
+
+* Added spinner.
+* Removed unused variables from AvatarPreview.
+
 ## 0.0.2+2
 
 * Refactored avatar and avatar previews.
