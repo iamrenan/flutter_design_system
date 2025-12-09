@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' show CircleAvatar, Icons;
+import 'package:flutter/widget_previews.dart';
 import 'package:flutter/widgets.dart';
 
 import '../../core/icons.dart';
@@ -159,4 +160,188 @@ abstract class AvatarSize {
   final double size;
 
   const AvatarSize(this.size);
+}
+
+@Preview(
+  name: 'Default Avatar - Small',
+  group: 'Avatar Sizes',
+  size: Size(100, 100),
+)
+Widget previewDefaultSmall() {
+  return const Center(child: Avatar(size: AvatarSizes.sm));
+}
+
+@Preview(
+  name: 'Default Avatar - Medium',
+  group: 'Avatar Sizes',
+  size: Size(100, 100),
+)
+Widget previewDefaultMedium() {
+  return const Center(child: Avatar(size: AvatarSizes.md));
+}
+
+@Preview(
+  name: 'Default Avatar - Large',
+  group: 'Avatar Sizes',
+  size: Size(100, 100),
+)
+Widget previewDefaultLarge() {
+  return const Center(child: Avatar(size: AvatarSizes.lg));
+}
+
+@Preview(
+  name: 'Initials Avatar - Single Name (Small)',
+  group: 'Avatar Initials',
+  size: Size(100, 100),
+)
+Widget previewInitialsSingleSmall() {
+  return const Center(
+    child: Avatar(name: 'Renan', size: AvatarSizes.sm),
+  );
+}
+
+@Preview(
+  name: 'Initials Avatar - Single Name (Medium)',
+  group: 'Avatar Initials',
+  size: Size(100, 100),
+)
+Widget previewInitialsSingleMedium() {
+  return const Center(
+    child: Avatar(name: 'Renan', size: AvatarSizes.md),
+  );
+}
+
+@Preview(
+  name: 'Initials Avatar - Single Name (Large)',
+  group: 'Avatar Initials',
+  size: Size(100, 100),
+)
+Widget previewInitialsSingleLarge() {
+  return const Center(
+    child: Avatar(name: 'Renan', size: AvatarSizes.lg),
+  );
+}
+
+@Preview(
+  name: 'Initials Avatar - Full Name (Small)',
+  group: 'Avatar Initials',
+  size: Size(100, 100),
+)
+Widget previewInitialsFullSmall() {
+  return const Center(
+    child: Avatar(name: 'Renan Silva', size: AvatarSizes.sm),
+  );
+}
+
+@Preview(
+  name: 'Initials Avatar - Full Name (Medium)',
+  group: 'Avatar Initials',
+  size: Size(100, 100),
+)
+Widget previewInitialsFullMedium() {
+  return const Center(
+    child: Avatar(name: 'Renan Silva', size: AvatarSizes.md),
+  );
+}
+
+@Preview(
+  name: 'Initials Avatar - Full Name (Large)',
+  group: 'Avatar Initials',
+  size: Size(100, 100),
+)
+Widget previewInitialsFullLarge() {
+  return const Center(
+    child: Avatar(name: 'Renan Silva', size: AvatarSizes.lg),
+  );
+}
+
+@Preview(
+  name: 'Image Avatar - Small',
+  group: 'Avatar Images',
+  size: Size(100, 100),
+)
+Widget previewImageSmall() {
+  return const Center(
+    child: Avatar(
+      image: NetworkImage(
+        'https://avatars.githubusercontent.com/u/8487664?v=4&size=64',
+      ),
+      size: AvatarSizes.sm,
+    ),
+  );
+}
+
+@Preview(
+  name: 'Image Avatar - Medium',
+  group: 'Avatar Images',
+  size: Size(100, 100),
+)
+Widget previewImageMedium() {
+  return const Center(
+    child: Avatar(
+      image: NetworkImage(
+        'https://avatars.githubusercontent.com/u/8487664?v=4&size=64',
+      ),
+      size: AvatarSizes.md,
+    ),
+  );
+}
+
+@Preview(
+  name: 'Image Avatar - Large',
+  group: 'Avatar Images',
+  size: Size(100, 100),
+)
+Widget previewImageLarge() {
+  return const Center(
+    child: Avatar(
+      image: NetworkImage(
+        'https://avatars.githubusercontent.com/u/8487664?v=4&size=64',
+      ),
+      size: AvatarSizes.lg,
+    ),
+  );
+}
+
+@Preview(
+  name: 'All Sizes Comparison',
+  group: 'Avatar Showcase',
+  size: Size(300, 150),
+)
+Widget previewAllSizes() {
+  return const Center(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Avatar(size: AvatarSizes.sm, name: 'Small'),
+        Avatar(size: AvatarSizes.md, name: 'Medium'),
+        Avatar(size: AvatarSizes.lg, name: 'Large'),
+      ],
+    ),
+  );
+}
+
+@Preview(
+  name: 'All Variants Comparison',
+  group: 'Avatar Showcase',
+  size: Size(300, 150),
+)
+Widget previewAllVariants() {
+  return const Center(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Avatar(size: AvatarSizes.md),
+        Avatar(size: AvatarSizes.md, name: 'John Doe'),
+        Avatar(
+          size: AvatarSizes.md,
+          image: NetworkImage(
+            'https://avatars.githubusercontent.com/u/8487664?v=4&size=64',
+          ),
+        ),
+      ],
+    ),
+  );
 }
