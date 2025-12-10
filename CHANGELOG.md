@@ -1,3 +1,8 @@
+## 0.0.4
+
+* Added accordion.
+* Added spacing and radius tokens.
+
 ## 0.0.3
 
 * Added spinner.
