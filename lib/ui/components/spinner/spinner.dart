@@ -12,7 +12,7 @@ class Spinner extends ProgressIndicator {
     super.key,
     super.value,
     super.color,
-    this.size = SpinnerSize.md,
+    this.size = SpinnerSize.size24,
   });
 
   @override
@@ -143,22 +143,22 @@ class _SpinnerDefaults extends ProgressIndicatorThemeData {
 }
 
 enum SpinnerSize {
-  sm,
-  md,
-  lg,
-  xl;
-
-  double get strokeWidth => switch (this) {
-    SpinnerSize.sm => 2.4,
-    SpinnerSize.md => 4.8,
-    SpinnerSize.lg => 3.6,
-    SpinnerSize.xl => 9.6,
-  };
+  size16,
+  size24,
+  size32,
+  size64;
 
   BoxConstraints get constraints => switch (this) {
-    SpinnerSize.sm => BoxConstraints.tight(Size.square(16)),
-    SpinnerSize.md => BoxConstraints.tight(Size.square(24)),
-    SpinnerSize.lg => BoxConstraints.tight(Size.square(32)),
-    SpinnerSize.xl => BoxConstraints.tight(Size.square(64)),
+    SpinnerSize.size16 => BoxConstraints.tight(Size.square(16)),
+    SpinnerSize.size24 => BoxConstraints.tight(Size.square(24)),
+    SpinnerSize.size32 => BoxConstraints.tight(Size.square(32)),
+    SpinnerSize.size64 => BoxConstraints.tight(Size.square(64)),
+  };
+
+  double get strokeWidth => switch (this) {
+    SpinnerSize.size16 => 2.4,
+    SpinnerSize.size24 => 4.8,
+    SpinnerSize.size32 => 3.6,
+    SpinnerSize.size64 => 9.6,
   };
 }

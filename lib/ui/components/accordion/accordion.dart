@@ -44,7 +44,7 @@ class _AccordionState extends State<Accordion> {
       turns: _iconTurns,
       child: Icon(
         _expansibleController.isExpanded ? Icons.close : Icons.add,
-        size: IconSize.md,
+        size: IconSize.size20,
         color: widget.variant.iconColor(context),
       ),
     );
@@ -66,7 +66,7 @@ class _AccordionState extends State<Accordion> {
     return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.only(top: Spacing.sm),
+        padding: EdgeInsets.only(top: Spacing.spacing8),
         child: Text(widget.content, style: widget.variant.textStyle(context)),
       ),
     );

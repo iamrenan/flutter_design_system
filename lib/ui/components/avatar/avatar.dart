@@ -6,8 +6,6 @@ import '../../core/icons.dart';
 import '../../core/text_styles.dart';
 import '../../core/theme/components/avatar.theme.dart';
 
-enum AvatarSizes { sm, md, lg }
-
 final class Avatar extends StatelessWidget {
   /// The image to display in the avatar.
   ///
@@ -22,7 +20,12 @@ final class Avatar extends StatelessWidget {
   /// The size of the avatar, based on pre-defined sizes.
   final AvatarSizes size;
 
-  const Avatar({super.key, this.image, this.name, this.size = AvatarSizes.md});
+  const Avatar({
+    super.key,
+    this.image,
+    this.name,
+    this.size = AvatarSizes.size12,
+  });
 
   bool get _hasImage => image != null;
 
@@ -102,31 +105,47 @@ final class _AvatarDefaults {
 
   static _AvatarDefaults fromSize(AvatarSizes size) {
     return switch (size) {
-      AvatarSizes.sm => _AvatarDefaults(
-        radius: AvatarSize.sm / 2,
-        iconSize: IconSize.xs,
-        textStyle: TextStyles.bodyXs,
+      AvatarSizes.size10 => _AvatarDefaults(
+        radius: AvatarSize.size20 / 2,
+        iconSize: IconSize.size12,
+        textStyle: TextStyles.labelSmall,
       ),
 
-      AvatarSizes.md => _AvatarDefaults(
-        radius: AvatarSize.md / 2,
-        iconSize: IconSize.sm,
-        textStyle: TextStyles.bodySm,
+      AvatarSizes.size12 => _AvatarDefaults(
+        radius: AvatarSize.size24 / 2,
+        iconSize: IconSize.size16,
+        textStyle: TextStyles.bodySmall,
       ),
 
-      AvatarSizes.lg => _AvatarDefaults(
-        radius: AvatarSize.lg / 2,
-        iconSize: IconSize.md,
-        textStyle: TextStyles.bodyMd,
+      AvatarSizes.size16 => _AvatarDefaults(
+        radius: AvatarSize.size32 / 2,
+        iconSize: IconSize.size20,
+        textStyle: TextStyles.bodyMedium,
       ),
     };
   }
 }
 
+enum AvatarSizes {
+  /// 10
+  size10,
+
+  /// 12
+  size12,
+
+  ///16
+  size16,
+}
+
 abstract class AvatarSize {
-  static const double sm = IconSize.md;
-  static const double md = IconSize.lg;
-  static const double lg = IconSize.xl;
+  /// 20
+  static const double size20 = IconSize.size20;
+
+  /// 24
+  static const double size24 = IconSize.size24;
+
+  /// 32
+  static const double size32 = IconSize.size32;
 
   final double size;
 

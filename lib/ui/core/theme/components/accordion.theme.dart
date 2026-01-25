@@ -133,23 +133,25 @@ enum AccordionVariants {
   flat;
 
   EdgeInsets get padding => switch (this) {
-    AccordionVariants.outlined => EdgeInsets.symmetric(vertical: Spacing.lg),
+    AccordionVariants.outlined => EdgeInsets.symmetric(
+      vertical: Spacing.spacing16,
+    ),
     AccordionVariants.flat => EdgeInsets.symmetric(
-      vertical: Spacing.lg,
-      horizontal: Spacing.xl,
+      vertical: Spacing.spacing16,
+      horizontal: Spacing.spacing24,
     ),
   };
 
   BorderRadius get borderRadius {
     return switch (this) {
-      AccordionVariants.outlined => Radius.none,
-      AccordionVariants.flat => Radius.sm,
+      AccordionVariants.outlined => Radius.radius0,
+      AccordionVariants.flat => Radius.radius6,
     };
   }
 
   TextStyle titleStyle(BuildContext context) {
     final theme = AccordionTheme.maybeOf(context);
-    final defaultTextStyle = TextStyles.bodyMd;
+    final defaultTextStyle = TextStyles.bodyMedium;
     return switch (this) {
       AccordionVariants.outlined => defaultTextStyle.copyWith(
         color: theme?.outlined.titleColor,
@@ -162,7 +164,7 @@ enum AccordionVariants {
 
   TextStyle textStyle(BuildContext context) {
     final theme = AccordionTheme.maybeOf(context);
-    final defaultTextStyle = TextStyles.bodySm;
+    final defaultTextStyle = TextStyles.bodySmall;
     return switch (this) {
       AccordionVariants.outlined => defaultTextStyle.copyWith(
         color: theme?.outlined.textColor,

@@ -60,53 +60,59 @@ Widget previewAllVariants() {
 }
 
 @AvatarPreview(name: 'Small', group: 'Avatar Sizes')
-Widget previewDefaultSmall() => Avatar(size: AvatarSizes.sm);
+Widget previewDefaultSmall() => Avatar(size: AvatarSizes.size10);
 
 @AvatarPreview(name: 'Medium', group: 'Avatar Sizes')
-Widget previewDefaultMedium() => Avatar(size: AvatarSizes.md);
+Widget previewDefaultMedium() => Avatar(size: AvatarSizes.size12);
 
 @AvatarPreview(name: 'Large', group: 'Avatar Sizes')
-Widget previewDefaultLarge() => Avatar(size: AvatarSizes.lg);
+Widget previewDefaultLarge() => Avatar(size: AvatarSizes.size16);
 
 @AvatarPreview(name: 'Single Name (Small)', group: 'Avatar Initials')
 Widget previewInitialsSingleSmall() =>
-    Avatar(name: 'Renan', size: AvatarSizes.sm);
+    Avatar(name: 'Renan', size: AvatarSizes.size10);
 
 @AvatarPreview(name: 'Single Name (Medium)', group: 'Avatar Initials')
 Widget previewInitialsSingleMedium() =>
-    Avatar(name: 'Renan', size: AvatarSizes.md);
+    Avatar(name: 'Renan', size: AvatarSizes.size12);
 
 @AvatarPreview(name: 'Single Name (Large)', group: 'Avatar Initials')
 Widget previewInitialsSingleLarge() =>
-    Avatar(name: 'Renan', size: AvatarSizes.lg);
+    Avatar(name: 'Renan', size: AvatarSizes.size16);
 
 @AvatarPreview(name: 'Full Name (Small)', group: 'Avatar Initials')
 Widget previewInitialsFullSmall() =>
-    Avatar(name: 'Renan Aguiar', size: AvatarSizes.sm);
+    Avatar(name: 'Renan Aguiar', size: AvatarSizes.size10);
 
 @AvatarPreview(name: 'Full Name (Medium)', group: 'Avatar Initials')
 Widget previewInitialsFullMedium() =>
-    Avatar(name: 'Renan Aguiar', size: AvatarSizes.md);
+    Avatar(name: 'Renan Aguiar', size: AvatarSizes.size12);
 
 @AvatarPreview(name: 'Full Name (Large)', group: 'Avatar Initials')
 Widget previewInitialsFullLarge() =>
-    Avatar(name: 'Renan Aguiar', size: AvatarSizes.lg);
+    Avatar(name: 'Renan Aguiar', size: AvatarSizes.size16);
 
 @AvatarPreview(name: 'Long name', group: 'Avatar Initials')
 Widget previewInitialsLongName() =>
-    Avatar(name: 'Uses first and last initials only', size: AvatarSizes.lg);
+    Avatar(name: 'Uses first and last initials only', size: AvatarSizes.size16);
 
 @AvatarPreview(name: 'Empty name', group: 'Avatar Initials')
-Widget previewInitialsEmptyName() => Avatar(name: '', size: AvatarSizes.lg);
+Widget previewInitialsEmptyName() => Avatar(name: '', size: AvatarSizes.size16);
 
 @AvatarPreview(name: 'Image Avatar - Small', group: 'Avatar Images')
-Widget previewImageSmall() =>
-    Avatar(image: NetworkImage(_previewAvatarImageUrl), size: AvatarSizes.sm);
+Widget previewImageSmall() => Avatar(
+  image: NetworkImage(_previewAvatarImageUrl),
+  size: AvatarSizes.size10,
+);
 
 @AvatarPreview(name: 'Image Avatar - Medium', group: 'Avatar Images')
-Widget previewImageMedium() =>
-    Avatar(image: NetworkImage(_previewAvatarImageUrl), size: AvatarSizes.md);
+Widget previewImageMedium() => Avatar(
+  image: NetworkImage(_previewAvatarImageUrl),
+  size: AvatarSizes.size12,
+);
 
 @AvatarPreview(name: 'Image Avatar - Large', group: 'Avatar Images')
-Widget previewImageLarge() =>
-    Avatar(image: NetworkImage(_previewAvatarImageUrl), size: AvatarSizes.lg);
+Widget previewImageLarge() => Avatar(
+  image: NetworkImage(_previewAvatarImageUrl),
+  size: AvatarSizes.size16,
+);

@@ -23,20 +23,20 @@ final class SpinnerPreview extends Preview {
 }
 
 @SpinnerPreview(group: 'Spinner Sizes', name: 'Small', size: Size.square(64))
-Widget spinnerSmallPreview() => Spinner(size: SpinnerSize.sm);
+Widget spinnerSmallPreview() => Spinner(size: SpinnerSize.size16);
 
 @SpinnerPreview(group: 'Spinner Sizes', name: 'Medium', size: Size.square(64))
-Widget spinnerMediumPreview() => Spinner(size: SpinnerSize.md);
+Widget spinnerMediumPreview() => Spinner(size: SpinnerSize.size24);
 
 @SpinnerPreview(group: 'Spinner Sizes', name: 'Large', size: Size.square(64))
-Widget spinnerLargePreview() => Spinner(size: SpinnerSize.lg);
+Widget spinnerLargePreview() => Spinner(size: SpinnerSize.size32);
 
 @SpinnerPreview(
   group: 'Spinner Sizes',
   name: 'Extra Large',
   size: Size.square(64),
 )
-Widget spinnerExtraLargePreview() => Spinner(size: SpinnerSize.xl);
+Widget spinnerExtraLargePreview() => Spinner(size: SpinnerSize.size64);
 
 @SpinnerPreview(group: 'Spinner Colors', name: 'Red', size: Size.square(32))
 Widget spinnerRedPreview() => Spinner(color: Colors.red);
@@ -48,15 +48,15 @@ Widget spinnerGreenPreview() => Spinner(color: Colors.green);
 Widget spinnerBluePreview() => Spinner(color: Colors.blue);
 
 @SpinnerPreview(group: 'Spinner Values', name: '0 or 1', size: Size.square(64))
-Widget spinnerValueZeroPreview() => Spinner(size: SpinnerSize.sm, value: 0);
+Widget spinnerValueZeroPreview() => Spinner(size: SpinnerSize.size16, value: 0);
 
 @SpinnerPreview(group: 'Spinner Values', name: '0.25', size: Size.square(64))
 Widget spinnerValueQuarterPreview() =>
-    Spinner(size: SpinnerSize.sm, value: 0.25);
-
+    Spinner(size: SpinnerSize.size16, value: 0.25);
 @SpinnerPreview(group: 'Spinner Values', name: '0.5', size: Size.square(64))
-Widget spinnerValueHalfPreview() => Spinner(size: SpinnerSize.sm, value: 0.5);
+Widget spinnerValueHalfPreview() =>
+    Spinner(size: SpinnerSize.size16, value: 0.5);
 
 @SpinnerPreview(group: 'Spinner Values', name: '0.75', size: Size.square(64))
 Widget spinnerValueThreeQuarterPreview() =>
-    Spinner(size: SpinnerSize.sm, value: 0.75);
+    Spinner(size: SpinnerSize.size16, value: 0.75);
